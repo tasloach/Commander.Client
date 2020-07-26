@@ -1,1 +1,7 @@
 <p>command works!</p>
+<hr>
+
+<button (click)="getGets()">Click me!</button>
+<div *ngFor="let get of gets | async">
+    {{ get | json }}
+</div>
