@@ -11,12 +11,7 @@ export class CommandComponent implements OnInit {
 
   gets: any;
 
-  constructor(
-    private httpClient: HttpClient,
-    // private Id: number,
-    // private Command: string,
-    // private Description: string
-  ) {}
+  constructor(private httpClient: HttpClient) {}
 
   ngOnInit(): void {}
 
