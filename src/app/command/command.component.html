@@ -2,6 +2,7 @@
 <hr>
 
 <button (click)="getGets()">Click me!</button>
-<div *ngFor="let get of gets | async">
+<!-- <div *ngFor="let get of gets | async"> -->
+<div *ngFor="let get of gets">
     {{ get | json }}
 </div>

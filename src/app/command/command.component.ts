@@ -15,7 +15,15 @@ export class CommandComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  getGets(): void {
-    this.gets = this.httpClient.get(this.ROOT_URL + '/commands');
+  getGets(): any {
+    this.httpClient.get(this.ROOT_URL + '/commands').subscribe(
+      (data) => {
+        this.gets = data;
+        console.log('Success communicating with Commander Web API', data);
+      },
+      (error) => console.log('Error communicating with Commander Web API', error)
+    );
+
+    return this.gets;
   }
 }
